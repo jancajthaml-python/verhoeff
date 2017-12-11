@@ -4,7 +4,7 @@ mult = [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [1, 2, 3, 4, 0, 6, 7, 8, 9, 5], [2, 3, 4
 perm = [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [1, 5, 7, 6, 2, 8, 3, 0, 9, 4], [5, 8, 0, 3, 7, 9, 6, 1, 4, 2], [8, 9, 1, 6, 0, 4, 3, 5, 2, 7], [9, 4, 5, 3, 1, 2, 6, 8, 7, 0], [4, 2, 8, 6, 5, 7, 3, 9, 0, 1], [2, 7, 9, 3, 8, 0, 6, 4, 1, 5], [7, 0, 4, 6, 9, 1, 3, 2, 5, 8]]
 inv  = [0, 4, 3, 2, 1, 5, 6, 7, 8, 9]
 
-def digit(msg):
+def Digit(msg):
   try:
     i = len(msg)
     j = 0
@@ -21,7 +21,7 @@ def digit(msg):
   except IndexError:
     return None
 
-def validate(msg):
+def Validate(msg):
   try:
     i = len(msg)
     j = 0
@@ -38,8 +38,8 @@ def validate(msg):
   except IndexError:
     return False
 
-def generate(msg):
-  d = digit(msg)
+def Generate(msg):
+  d = Digit(msg)
   if d:
     return msg + str(d)
   else:

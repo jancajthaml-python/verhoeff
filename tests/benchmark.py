@@ -12,5 +12,5 @@ def measure(name, stmt, setup, count):
   per_op_nanos = round(total_nanos / count, 1)
   print("%-18s%14s%20s ns/op" % (name, count, per_op_nanos))
 
-measure("verhoeff.digit (small)", "verhoeff.digit('123')", "import verhoeff", BENCHMARK_ITERATIONS)
-measure("verhoeff.digit (large)", "verhoeff.digit('00123014764700968325')", "import verhoeff", BENCHMARK_ITERATIONS)
+measure("verhoeff.Digit (small)", "verhoeff.Digit('123')", "import verhoeff", BENCHMARK_ITERATIONS)
+measure("verhoeff.Digit (large)", "verhoeff.Digit('00123014764700968325')", "import verhoeff", BENCHMARK_ITERATIONS)

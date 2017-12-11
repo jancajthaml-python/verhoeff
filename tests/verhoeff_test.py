@@ -18,8 +18,8 @@ class TestVerhoeff(unittest.TestCase):
 
     for t in tests:
       number, expected = t
-      valid = verhoeff.digit(number)
-      self.assertEqual(valid, expected, "verhoeff.digit?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
+      valid = verhoeff.Digit(number)
+      self.assertEqual(valid, expected, "verhoeff.Digit?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
 
   def test_validate(self):
     tests = [
@@ -30,8 +30,8 @@ class TestVerhoeff(unittest.TestCase):
 
     for t in tests:
       number, expected = t
-      valid = verhoeff.validate(number)
-      self.assertEqual(valid, expected, "verhoeff.validate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
+      valid = verhoeff.Validate(number)
+      self.assertEqual(valid, expected, "verhoeff.Validate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
 
   def test_generate(self):
     tests = [
@@ -40,8 +40,8 @@ class TestVerhoeff(unittest.TestCase):
 
     for t in tests:
       number, expected = t
-      valid = verhoeff.generate(number)
-      self.assertEqual(valid, expected, "verhoeff.generate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
+      valid = verhoeff.Generate(number)
+      self.assertEqual(valid, expected, "verhoeff.Generate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
 
 if __name__ == '__main__':
   unittest.main()
